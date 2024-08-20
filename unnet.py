@@ -51,7 +51,7 @@ def log(log_level: int, s: str, new_line: bool = True):
 def create_network(data_dir: str, out_csv_path: str):
 	log(LOG.INFO, "Creating Network from data files in {data_dir}...")
 	csv = open(out_csv_path, "wb")
-	csv.write("from,to\n".encode("utf8"))
+	csv.write("source,target\n".encode("utf8"))
 
 	files = []
 	for d1 in os.listdir(data_dir):
